@@ -105,20 +105,12 @@ div#voteDisplay img {
 div#info {
     display: inline-block;
     width: 45%;
+    margin-left: 100px;
+    margin-top: 35px;
+    box-shadow:  #171A21 15px 15px 25px;
 }
 
-div#info h1 {
-    display: block;
-    margin-left: 300px;
-    font-family: 'Montserrat', sans-serif;
-    color: #171A21;
-}
 
-div#info li {
-    list-style: none;
-    font-family: 'Roboto Slab', serif;
-    padding: 2px;
-    margin-left: 220px;
 
 }
 

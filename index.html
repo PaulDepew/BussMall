@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buss Mall</title>
     <link href='stylesheet.css' rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Slab:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,12 +28,7 @@
        
     </div>
     <div id='info'>
-        <h1>Instructions!</h1>
-        <ul>
-            <li>Choose your favorite Image by clicking on it!</li>
-            <li>Complete the number of voting rounds!</li>
-            <li>Check out your results to the right!</li>
-        </ul>
+        <canvas id="bar-chart" width="800" height="450"></canvas>
     </div>
     <script src='app.js'></script>
 </body>
