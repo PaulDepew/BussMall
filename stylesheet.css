@@ -9,3 +9,130 @@ font-family: 'Roboto Slab', serif; */
 #7D98A1 - GreenBlue
 */
 
+/* body #img1 {
+    width: 300px;
+}
+
+body #img2 {
+    width: 300px;
+}
+
+body #img3 {
+    width: 300px;
+} */
+
+body {
+    background-color:#EEF0F2 ;
+    width: 1200px;
+    margin: 0px;
+}
+
+header {
+    height: 150px;
+    margin-top: 50px;
+}
+
+header img {
+    width: 100px;
+    /* margin-top: 50px; */
+    margin-left: 50px;
+    /* padding: 25px; */
+    float: left;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    color: #7D98A1;
+    
+}
+
+header p {
+    font-family: 'Montserrat', sans-serif;
+    /* display: inline-block; */
+    margin-top: 0px;
+    margin-left: 165px;
+    color: #171A21;
+}
+
+div#rank {
+float: right;
+/* display: inline-block; */
+/* position: relative; */
+/* margin-top: 100px; */
+/* margin-left: 50px; */
+/* margin-right: 25px ; */
+padding: 15px;
+width: 32%;
+background-color: #C6C7C4 ;
+box-shadow: #171A21 10px 10px 25px;
+border-radius: 25px;
+}
+
+div#voteDisplay h1 {
+    display: block;
+    margin-left: 35%;
+    font-family: 'Montserrat', sans-serif;
+    color: #171A21;
+}
+
+div#voteDisplay {
+    background-color: #C6C7C4;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 15px;
+    width: 57%;
+    height: fit-content;
+    /* margin-top: 75px; */
+    margin-left: 25px;
+    box-shadow: #171A21 10px 10px 25px;
+    /* float: left; */
+    
+}
+
+div#voteDisplay img {
+    width: 31%;
+    padding: 5px;
+    margin-top: 50px;
+    box-shadow:  #171A21 1px 5px 5px;
+    border-radius: 20px;
+    border: none;
+}
+
+div#info {
+    display: inline-block;
+    width: 45%;
+}
+
+div#info h1 {
+    display: block;
+    margin-left: 300px;
+    font-family: 'Montserrat', sans-serif;
+    color: #171A21;
+}
+
+div#info li {
+    list-style: none;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px;
+    margin-left: 220px;
+
+}
+
+div#rank h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #171A21;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+div#rank li {
+    font-family: 'Montserrat', sans-serif;
+    color: #171A21;
+    list-style: none;
+    padding: 5px;
+}
+
