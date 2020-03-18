@@ -167,40 +167,70 @@ function renderGraph() {
   for (var i = 0; i < allImages.length; i++) {
     mainChart.data.labels.push(allImages[i].name);
     mainChart.data.datasets[0].data.push(allImages[i].numClicked);
+    // console.log(allImages);
+    localStorage.setItem('allImages', JSON.stringify(allImages) );
+
   }
 }
 
+function renderLocalData(){
+  for (var i = 0; i < allImages.length; i++) {
+    allImages = JSON.parse(localStorage.allImages);
+    mainChart.data.labels.push(allImages[i].name);
+    mainChart.data.datasets[0].data.push(allImages[i].numClicked);
+    // console.log(allImages);
+
+  }
+
+
+}
 
 function clickHandler(event) {
 //   console.log(event.target.name);
-  var listEl = document.getElementById('ranking');
-  listEl.innerHTML = '';
-  voteRounds++;
 
-  for (var i = 0; i < allImages.length; i++) {
-    if (allImages[i].name === event.target.name) {
-      allImages[i].numClicked++;
-      // console.log(voteRounds);
-      renderImages();
-    } if (voteRounds >= 25) {
-      event = false;
-      image1.removeEventListener('click', clickHandler);
-      image2.removeEventListener('click', clickHandler);
-      image3.removeEventListener('click', clickHandler);
-      alert('Thanks for Voting! Check out your Results!');
-      renderResults();
-      renderGraph();
-      mainChart.update();
-      break;
+  if (!localStorage.allImages) {
+    var listEl = document.getElementById('ranking');
+    listEl.innerHTML = '';
+    voteRounds++;
+
+
+    for (var i = 0; i < allImages.length; i++) {
+      if (allImages[i].name === event.target.name) {
+        allImages[i].numClicked++;
+        // console.log(voteRounds);
+        renderImages();
+
+      } if (voteRounds >= 25) {
+        event = false;
+        image1.removeEventListener('click', clickHandler);
+        image2.removeEventListener('click', clickHandler);
+        image3.removeEventListener('click', clickHandler);
+        alert('Thanks for Voting! Check out your Results!');
+        renderResults();
+        renderGraph();
+        mainChart.update();
+      // break;
+      }
+
     }
+
     // console.log(allImages[i].numClicked);
+  } else {
+    event = false;
+    image1.removeEventListener('click', clickHandler);
+    image2.removeEventListener('click', clickHandler);
+    image3.removeEventListener('click', clickHandler);
+    alert('Thanks for Voting! Check out your Results!');
+    renderResults();
+    renderLocalData();
+    mainChart.update();
   }
+
 }
+
 
 image1.addEventListener('click', clickHandler);
 image2.addEventListener('click', clickHandler);
 image3.addEventListener('click', clickHandler);
 
 // renderResults();
-
-
